@@ -1,28 +1,12 @@
 
-# dvc
-
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/dvc)](https://CRAN.R-project.org/package=dvc)
-[![R build status](https://github.com/andrewcstewart/dvc-r/workflows/R-CMD-check/badge.svg)](https://github.com/andrewcstewart/dvc-r/actions)
-![pkgdown](https://github.com/andrewcstewart/dvc-r/workflows/pkgdown/badge.svg)
-<!-- badges: end -->
+# dvcr
 
 This package provides a simple wrapper around [Data Version Control (DVC)](https://dvc.org/).
 
 ## Installation
 
-You can install the released version of dvc from [CRAN](https://CRAN.R-project.org) with:
-
 ``` r
-# install.packages("dvc") # (Not on CRAN yet)
-```
-
-Or install the development version from GitHub with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("andrewcstewart/dvc")
+devtools::install_github("insilica/dvcr")
 ```
 
 ## Example
@@ -30,23 +14,20 @@ devtools::install_github("andrewcstewart/dvc")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(dvc)
+library(dvcr)
 ## basic example code
 
-# install dvc
-dvc::install_dvc()
-
 # setup dvc in your current project
-dvc::use_dvc()
+dvcr::use_dvc()
 
 # tell dvc to track a file
 write.csv2(x = mtcars, file = "mtcars.csv")
-dvc::add(path = "mtcars.csv")
+dvcr::add(path = "mtcars.csv")
 
 # setup remote storage
-dvc::remote_add(name = "myremote", url = "s3://my-bucket/dvc-storage")
-dvc::push()
-dvc::pull()
+dvcr::remote_add(name = "myremote", url = "s3://my-bucket/dvc-storage")
+dvcr::push()
+dvcr::pull()
 ```
 
 ## Overview
