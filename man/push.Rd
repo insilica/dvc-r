@@ -4,7 +4,7 @@
 \alias{push}
 \title{Upload tracked files or directories to remote storage.}
 \usage{
-push(targets = c(), remote = FALSE)
+push(targets = c(), remote = "")
 }
 \arguments{
 \item{targets}{Limit command scope to these tracked files/directories, .dvc files, or stage names.}

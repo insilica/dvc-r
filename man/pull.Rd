@@ -4,7 +4,7 @@
 \alias{pull}
 \title{Download tracked files or directories from remote storage.}
 \usage{
-pull(targets = c(), remote = FALSE)
+pull(targets = c(), remote = "")
 }
 \arguments{
 \item{targets}{Limit command scope to these tracked files/directories, .dvc files, or stage names.}

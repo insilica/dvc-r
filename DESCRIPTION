@@ -1,4 +1,4 @@
-Package: dvc
+Package: dvcr
 Type: Package
 Title: Use Data Version Control (DVC) in R
 Version: 0.1.0
@@ -15,7 +15,7 @@ Imports:
     git2r,
     glue,
     lifecycle
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 RdMacros: lifecycle
 Suggests: 
     testthat,

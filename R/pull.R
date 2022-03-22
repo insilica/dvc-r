@@ -6,12 +6,12 @@
 #' @param remote Remote storage to pull from.
 #'
 #' @export
-pull <- function(targets = c(), remote = FALSE) {
+pull <- function(targets = c(), remote = '') {
 
   # collapse targets
   targets <- paste0(targets, collapse = " ")
 
-  if(remote) {
+  if(remote != '') {
     remote <- glue::glue("--remote {remote}")
   }
 
