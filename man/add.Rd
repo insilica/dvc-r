@@ -16,5 +16,5 @@ add(path, repo = here::here(), git_commit = TRUE, git_message = "Add raw data")
 \item{git_message}{Git commit message.}
 }
 \description{
-Documentation: <https://man.dvc.org/add>
+Documentation: <https://dvc.org/doc/command-reference/add>
 }

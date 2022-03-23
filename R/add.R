@@ -1,6 +1,6 @@
 #' Track data files or directories with DVC.
 #'
-#' Documentation: <https://man.dvc.org/add>
+#' Documentation: <https://dvc.org/doc/command-reference/add>
 #'
 #' @param path Input files/directories to add.
 #' @param repo Path to root of repository (project root by default)
