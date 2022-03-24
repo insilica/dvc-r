@@ -4,11 +4,11 @@
 #'
 #' @param path Input files/directories to add.
 #' @param repo Path to root of repository (project root by default)
-#' @param git_commit Include git commits? (default: TRUE)
+#' @param git_commit Include git commits? (default: FALSE)
 #' @param git_message Git commit message.
 #'
 #' @export
-add <- function(path, repo = here::here(), git_commit = TRUE, git_message = "Add raw data") {
+add <- function(path, repo = here::here(), git_commit = FALSE, git_message = "Add raw data") {
   cmd <- glue::glue("dvc add {path}")
   system(cmd)
 
