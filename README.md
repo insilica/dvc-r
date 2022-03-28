@@ -3,6 +3,38 @@
 
 This package provides a simple wrapper around [Data Version Control (DVC)](https://dvc.org/).
 
+## Prerequisites 
+
+1. You will need to [install dvc](https://dvc.org/doc/install).
+
+2. Make sure that your R installation can see the `dvc` bin. 
+
+You should see a `dvc` help menu if you type this into the R console
+```{r}
+system("dvc")
+```
+
+If not, find the path of `dvc` in your terminal
+```
+$ which dvc
+/usr/local/bin/dvc
+```
+
+Make sure the path to `dvc` (e.g. `/usr/local/bin`) is in your R
+env
+
+```{r}
+Sys.getenv("PATH")
+```
+
+If not, use this command to add it to your R system env
+```{r}
+Sys.setenv(PATH=paste0(Sys.getenv("PATH"),":","/usr/local/bin"))
+```
+
+Add the above line to your `.Rprofile` file to ensure it can be found
+on restart
+
 ## Installation
 
 ``` r
